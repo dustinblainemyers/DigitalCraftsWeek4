@@ -1,0 +1,1 @@
+Week 4 of Digital Crafts. This week we will be starting Javascript.
