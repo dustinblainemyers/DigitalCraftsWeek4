@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dom Starter Kit </title>
+</head>
+
+<body>
+
+    <p id="helloWorld">Hello World</p>
+    <button type="button" id="clickMe">Click Me</button>
+
+</body>
+<script>
+    const myButton = document.getElementById("clickMe");
+    myButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        console.log("clicked");
+    })
+
+    const paragraph = document.getElementById("helloWorld");
+    paragraph.addEventListener('click', function(e) {
+        e.preventDefault();
+        console.log("event", e);
+        paragraph.innerHTML = "What is this";
+    })
+</script>
+
+</html>
