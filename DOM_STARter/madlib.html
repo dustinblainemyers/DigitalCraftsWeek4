@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dustin's Mad Libs </title>
+    <style>
+        body {
+
+            padding: 0;
+            margin: 0;
+            background-color: #C7D023;
+        }
+
+        .container {
+
+            width: 80%;
+            margin: auto;
+            margin-top:100px;
+        }
+
+        .lib span {
+            text-decoration: underline;
+
+        }
+
+        label {
+
+            display:block;
+        }
+
+        p {
+
+            margin:auto;
+            margin-top:100px;
+           
+        }
+
+        form {
+
+            
+
+        }
+
+        label  {
+            
+        }
+
+        input {
+
+            
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+
+        <form>
+            <label>What's your name ?
+                <input type="text" id="person2input" value="" />
+            </label>
+            <label>What is another person's name ?
+                <input type="text" id="person1input" value="" />
+            </label>
+            <label>A verb
+                <input type="text" id="verb1input" value="" />
+            </label>
+            <label>A noun
+                <input type="text" id="noun1input" value="" />
+            </label>
+            <label>Lets add a third person to the mix :
+                <input type="text" id="person3input" value="" />
+            </label>
+            <label>And another noun :
+                <input type="text" id="noun2input" value="" />
+            </label>
+            <label>Give me an adjective :
+                <input type="text" id="adjective1input" value="" />
+            </label>
+            <label>And another verb :
+                <input type="text" id="verb2input" value="" />
+            </label>
+
+            <button type="button" id="clickMe">Submit Mad Lib</button>
+
+        </form>
+
+        <p class="lib"><span id="person1">Person 1</span> didn't know when or why <span id="person2one"><u>Person
+            2</u></span> started <span id="verb1">Verb 1</span> at the <span id="noun1">Noun 1</span> , but
+    <span id="person2two">Person 2</span> kept <span id="verb1two">Verb 1</span> until the <span id="noun2">Noun
+        2</span> broke under the <span id="adjective1">Adjective 1</span> <span id="verb2">Verb 2.</p>
+    </div>
+
+</body>
+<script>
+    const myButton = document.getElementById("clickMe");
+    const person2one =  document.getElementById("person2one");
+    const person2two =  document.getElementById("person2two");
+    const person1 =  document.getElementById("person1");
+    const verb1 =  document.getElementById("verb1");
+    const noun1 =  document.getElementById("noun1");
+    const person3 =  document.getElementById("person3");
+    const noun2 =  document.getElementById("noun2");
+    const adjective1 =  document.getElementById("adjective1");
+    const verb2 =  document.getElementById("verb2");
+
+    const person2input =  document.getElementById("person2input");
+    const person1input =  document.getElementById("person1input");
+    const verb1input =  document.getElementById("verb1input");
+    const verb1twoinput =  document.getElementById("verb1twoinput");
+    const noun1input =  document.getElementById("noun1input");
+    const person3input =  document.getElementById("person3input");
+    const noun2input =  document.getElementById("noun2input");
+    const adjective1input =  document.getElementById("adjective1input");
+    const verb2input =  document.getElementById("verb2input");
+    
+    myButton.addEventListener('click', function (e) {
+        e.preventDefault();
+        console.log("Clicked");
+        person2one.innerHTML = person2input.value;
+        person2two.innerHTML = person2input.value;
+        verb2.innerHTML = verb2input.value;
+        verb1.innerHTML = verb1input.value;
+        adjective1.innerHTML = adjective1input.value;
+        noun1.innerHTML = noun1input.value;
+        noun2.innerHTML = noun2input.value;
+        person1.innerHTML = person1input.value;
+
+
+    })
+    
+
+
+
+</script>
+
+</html>
