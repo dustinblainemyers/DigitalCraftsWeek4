@@ -45,19 +45,33 @@
         }
 
         label  {
-            
+            background-color: rgb(41, 198, 78);
+            color: black;
+            text-shadow:1px 1px black;
+            font-size:24px;
         }
 
         input {
 
             
         }
+
+        h1 {
+
+            text-shadow: 1px 1px red;
+            font-size: 50px;
+            background-color:turquoise;
+        }
     </style>
 
 </head>
 
 <body>
+   
     <div class="container">
+        <header>
+            <h1>Mini MadLib !</h1>
+        </header>
 
         <form>
             <label>What's your name ?
@@ -102,6 +116,7 @@
     const person2two =  document.getElementById("person2two");
     const person1 =  document.getElementById("person1");
     const verb1 =  document.getElementById("verb1");
+    const verb1two = document.getElementById("verb1two")
     const noun1 =  document.getElementById("noun1");
     const person3 =  document.getElementById("person3");
     const noun2 =  document.getElementById("noun2");
@@ -125,6 +140,7 @@
         person2two.innerHTML = person2input.value;
         verb2.innerHTML = verb2input.value;
         verb1.innerHTML = verb1input.value;
+        verb1two.innerHTML = verb1input.value;
         adjective1.innerHTML = adjective1input.value;
         noun1.innerHTML = noun1input.value;
         noun2.innerHTML = noun2input.value;
