@@ -11,23 +11,28 @@
 <body>
 
     <p id="helloWorld">Hello World</p>
-    <button type="button" id="clickMe">Click Me</button>
+    <form>
+        <label>Your Name
+        <input type="text" id="userInput" value=""/>
+        </label>
+        <button type="button" id="clickMe">Click Me</button>
+    </form>
 
 </body>
 <script>
     const myButton = document.getElementById("clickMe");
+    const paragraph = document.getElementById("helloWorld");
+    const myInput = document.getElementById("userInput")
     myButton.addEventListener('click', function(e) {
         e.preventDefault();
+        console.log("Clicked");
+        paragraph.innerHTML = `Hello ${myInput.value}`;
         
-        console.log("clicked");
+      
     })
 
-    const paragraph = document.getElementById("helloWorld");
-    paragraph.addEventListener('click', function(e) {
-        e.preventDefault();
-        console.log("event", e);
-        paragraph.innerHTML = "What is this";
-    })
+  
+   
 </script>
 
 </html>
