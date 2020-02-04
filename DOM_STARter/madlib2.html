@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dustin's Mad Libs </title>
+    <style>
+        body {
+
+            padding: 0;
+            margin: 0;
+            background-color:plum;
+        }
+
+        .container {
+
+            width: 80%;
+            margin: auto;
+            margin-top:100px;
+        }
+
+        .lib span {
+            text-decoration: underline;
+
+        }
+
+        label {
+
+            display:block;
+            background-color: #D511CE;
+            background-color: 
+            color: black;
+            text-shadow:1px 1px black;
+            font-size:24px;
+        }
+
+        p {
+
+            margin:auto;
+            margin-top:100px;
+            background-color: #D511CE;
+            font-size:24px;
+            text-shadow:1px 1px black;
+            /* display:none; */
+           
+        }
+
+        span {
+
+            background-color: sandybrown;
+        }
+
+        form {
+
+            
+
+        }
+
+        
+
+        input {
+
+            
+        }
+
+        h1 {
+
+            text-shadow: 1px 1px red;
+            font-size: 50px;
+            background-color:turquoise;
+        }
+
+        button {
+
+            border-radius: 4px;
+            padding:4px;
+            background-color: salmon;
+            font-size:30px;
+            color:black;
+        }
+
+        @media(max-width: 420px) {
+
+            h1 {
+
+                font-size: 32px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+   
+    <div class="container">
+        <header>
+            <h1>Mini MadLib !</h1>
+        </header>
+
+        <form>
+            
+            <label>First Person's Name
+                <input type="text" id="firstPersonName" value="test" />
+
+            </label>
+            <label>Second Persons Name
+                <input type="text" id="secondPersonName" value="test" />
+
+            </label>
+            <label>Disease
+                <input type="text" id="disease" value="test" />
+
+            </label>
+            <label>First Symptom
+                <input type="text" id="firstSymptom" value="test" />
+
+            </label>
+            <label>Second Symptom
+                <input type="text" id="secondSymptom" value="test" />
+
+            </label>
+            <label>Third Symptom
+                <input type="text" id="thirdSymptom" value="test" />
+
+            </label>
+
+            <button type="button" id="submitmadlib">Submit Mad Lib</button>
+
+        </form>
+
+       <p>
+
+            <span class="firstPersonName">First Person Name</span> and <span class="secondPersonName">Second Person Name</span> called into work sick , saying they had <span class="firstSymptom">First Symptom</span>, <span class="secondSymptom">Second Symptom</span>, and <span class="thirdSymptom">Third Symptom</span>.  They were afraid it was the contageous disease <span class="disease">chosen disease</span> .  Boss called the CDC and soon an army of scientists in hazmat gear picked up <span class="firstPersonName">First Person Name</span> and <span class="secondPersonName">Second Person Name</span>.  First Person Name</span> and <span class="secondPersonName">Second Person Name</span> tried to explain that they were fine and where just trying to play hooky from work. </p>
+
+        
+
+        </div>
+    
+    
+
+</body>
+<script>
+
+
+const submitMadLib = document.getElementById("submitmadlib");
+outputs = document.querySelectorAll('span')
+// inputs = document.querySelectorAll('input')
+
+
+   
+     submitMadLib.addEventListener('click', function (e) {
+        e.preventDefault();
+        outputs.forEach(output => {
+        
+        const input =  document.getElementById(output.className);
+        output.innerHTML = input.value;
+        })
+
+
+     })
+    
+
+
+
+</script>
+
+</html>
