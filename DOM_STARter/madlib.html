@@ -11,7 +11,7 @@
 
             padding: 0;
             margin: 0;
-            background-color: #C7D023;
+            background-color:plum;
         }
 
         .container {
@@ -29,13 +29,27 @@
         label {
 
             display:block;
+            background-color: #D511CE;
+            background-color: 
+            color: black;
+            text-shadow:1px 1px black;
+            font-size:24px;
         }
 
         p {
 
             margin:auto;
             margin-top:100px;
+            background-color: #D511CE;
+            font-size:24px;
+            text-shadow:1px 1px black;
+            display:none;
            
+        }
+
+        span {
+
+            background-color: sandybrown;
         }
 
         form {
@@ -44,12 +58,7 @@
 
         }
 
-        label  {
-            background-color: rgb(41, 198, 78);
-            color: black;
-            text-shadow:1px 1px black;
-            font-size:24px;
-        }
+        
 
         input {
 
@@ -61,6 +70,23 @@
             text-shadow: 1px 1px red;
             font-size: 50px;
             background-color:turquoise;
+        }
+
+        button {
+
+            border-radius: 4px;
+            padding:4px;
+            background-color: salmon;
+            font-size:30px;
+            color:black;
+        }
+
+        @media(max-width: 420px) {
+
+            h1 {
+
+                font-size: 32px;
+            }
         }
     </style>
 
@@ -74,9 +100,12 @@
         </header>
 
         <form>
+            <div class="formdiv">
             <label>What's your name ?
                 <input type="text" id="person2input" value="" />
+
             </label>
+            </div>
             <label>What is another person's name ?
                 <input type="text" id="person1input" value="" />
             </label>
@@ -99,19 +128,20 @@
                 <input type="text" id="verb2input" value="" />
             </label>
 
-            <button type="button" id="clickMe">Submit Mad Lib</button>
+            <button type="button" id="submitmadlib">Submit Mad Lib</button>
 
         </form>
 
-        <p class="lib"><span id="person1">Person 1</span> didn't know when or why <span id="person2one"><u>Person
-            2</u></span> started <span id="verb1">Verb 1</span> at the <span id="noun1">Noun 1</span> , but
-    <span id="person2two">Person 2</span> kept <span id="verb1two">Verb 1</span> until the <span id="noun2">Noun
+        <p class="lib"><span id="person1">Person 1</span> Was walking to the store when their friend  <span id="person2one"><u>Person
+            2</u></span> proposed that they  <span id="verb1">Verb 1</span> into the  <span id="noun1">Noun 1</span>.
+    <span id="person2two">Person 2</span> claimed it was a great idea to  <span id="verb1two">Verb 1</span> on the  <span id="noun2">Noun
         2</span> broke under the <span id="adjective1">Adjective 1</span> <span id="verb2">Verb 2.</p>
-    </div>
+        </div>
+    
 
 </body>
 <script>
-    const myButton = document.getElementById("clickMe");
+    const submitMadLib = document.getElementById("submitmadlib");
     const person2one =  document.getElementById("person2one");
     const person2two =  document.getElementById("person2two");
     const person1 =  document.getElementById("person1");
@@ -133,7 +163,10 @@
     const adjective1input =  document.getElementById("adjective1input");
     const verb2input =  document.getElementById("verb2input");
     
-    myButton.addEventListener('click', function (e) {
+
+    const paragraph = document.querySelector("p")
+    const form = document.querySelector("form")
+    submitMadLib.addEventListener('click', function (e) {
         e.preventDefault();
         console.log("Clicked");
         person2one.innerHTML = person2input.value;
@@ -145,6 +178,9 @@
         noun1.innerHTML = noun1input.value;
         noun2.innerHTML = noun2input.value;
         person1.innerHTML = person1input.value;
+
+        paragraph.style.display = "block";
+        form.style.display = "none";
 
 
     })
