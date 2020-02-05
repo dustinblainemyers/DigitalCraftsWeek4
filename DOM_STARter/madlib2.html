@@ -138,9 +138,26 @@ inputs = document.querySelectorAll('input');
 console.log(inputs)
 console.log(outputs)
 
+
+
+const tempArray = [
+
+    "Updated text for Paragraph 1",   
+    "Updated text for Paragraph 2", 
+    "Updated text for Paragraph 3", 
+    "Updated text for Paragraph 4", 
+    "Updated text for Paragraph 5",  
+    "Updated text for Paragraph 6", 
+    "Updated text for Paragraph 7", 
+    "Updated text for Paragraph 8", 
+    "Updated text for Paragraph 9", 
+    "Updated text for Paragraph 10", 
+
+]
+
 outputs.forEach(function(output,index) {
 
-    output.innerHTML = `This is the updated text form my spans for ${index}`
+output.innerHTML = tempArray[index];
 })
 
 
