@@ -133,8 +133,15 @@
 
 
 const submitMadLib = document.getElementById("submitmadlib");
-outputs = document.querySelectorAll('span')
+outputs = document.querySelectorAll('span');
+inputs = document.querySelectorAll('input');
+console.log(inputs)
+console.log(outputs)
 
+outputs.forEach(function(output,index) {
+
+    output.innerHTML = `This is the updated text form my spans for ${index}`
+})
 
 
    
