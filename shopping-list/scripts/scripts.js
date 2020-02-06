@@ -1,30 +1,27 @@
 'use strict';
 
-const generateShoppingList = document.getElementById("generateShoppingList");
+const generateListButton = document.getElementById("generateListButton");
 const inputs = document.querySelectorAll('.list-item')
-
+const myListDiv = document.querySelectorAll('#myList');
 console.log(inputs);
 
+function generateMyList() {
+    const  newText = document.createElement('p');
+    newText.innerHTML = 'Hello World';
+    myListDiv.forEach(listitem => {
+        listitem.appendChild(newText);
+    })
+    
 
-generateShoppingList.addEventListener('click', function (e) {
+}
+
+generateListButton.addEventListener('click', function (e) {
     e.preventDefault();
-    const newDiv = document.createElement("ul"); 
+
     console.log("you clicked the button");
 
-    inputs.forEach(input => {
-
-       
-            const newListItem = document.createElement("li"); 
-            // add the text node to the newly created div
-            newDiv.appendChild(newListItem);  
-          
-            var newContent = document.createTextNode("Hi there and greetings!");
-            // add the newly created element and its content into the DOM 
-            const currentDiv = document.getElementById("separator"); 
-            document.body.insertAfter(newDiv, currentDiv); 
-          }
-        console.log(`This inputs value is ${input.value}`)
-    })
+    
+    generateMyList();
 
 })
 
