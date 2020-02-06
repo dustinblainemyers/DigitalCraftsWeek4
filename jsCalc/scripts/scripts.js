@@ -1,7 +1,18 @@
-// const submitMadLib = document.getElementById("submitmadlib");
+const Display = {
+
+    updateDisplay(inputOutputToParse) {
+
+        
+    }
+
+}
+ 
 
 
+
+console.log(document.querySelectorAll("div > .number"));
 const calculatorButtons = document.querySelectorAll("div > div");
+
 
 
 
@@ -14,4 +25,6 @@ const calculatorButtons = document.querySelectorAll("div > div");
         
     })
    })
-     
+
+
+  
