@@ -2,18 +2,16 @@
 
 
 const calculatorButtons = document.querySelectorAll("div > div");
-console.log(calculatorButtons);
 
 
 
-   
-    //  submitMadLib.addEventListener('click', function (e) {
-    //     e.preventDefault();
-    //     outputs.forEach(output => {
+
+   calculatorButtons.forEach(button => {
+
+    button.addEventListener('click', function (e) {
+        e.preventDefault();
+        console.log(`you clicked ${button.className}`);
         
-    //     const input =  document.getElementById(output.className);
-    //     output.innerHTML = input.value;
-    //     })
-
-
-    //  })
+    })
+   })
+     
