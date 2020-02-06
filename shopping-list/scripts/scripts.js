@@ -13,17 +13,15 @@ generateShoppingList.addEventListener('click', function (e) {
 
     inputs.forEach(input => {
 
-        function addElement () { 
-            // create a new div element 
-            
-            // and give it some content 
-            const newContent = document.createTextNode("Hi there and greetings!"); 
+       
+            const newListItem = document.createElement("li"); 
             // add the text node to the newly created div
-            newDiv.appendChild(newContent);  
+            newDiv.appendChild(newListItem);  
           
+            var newContent = document.createTextNode("Hi there and greetings!");
             // add the newly created element and its content into the DOM 
-            var currentDiv = document.getElementById("div1"); 
-            document.body.insertBefore(newDiv, currentDiv); 
+            const currentDiv = document.getElementById("separator"); 
+            document.body.insertAfter(newDiv, currentDiv); 
           }
         console.log(`This inputs value is ${input.value}`)
     })
