@@ -1,27 +1,20 @@
-const Display = {
-
-    updateDisplay(inputOutputToParse) {
-
-        
-    }
-
-}
+const displayArray = [];
  
 
 
 
 console.log(document.querySelectorAll("div > .number"));
-const calculatorButtons = document.querySelectorAll("div > div");
+const numbers = document.querySelectorAll("div > .number");
+const displayOutput = document.getElementById('display')
 
 
 
 
+   numbers.forEach(number => {
 
-   calculatorButtons.forEach(button => {
-
-    button.addEventListener('click', function (e) {
+    number.addEventListener('click', function (e) {
         e.preventDefault();
-        console.log(`you clicked ${button.className}`);
+        console.log(`you clicked ${number.innerText}`);
         
     })
    })
