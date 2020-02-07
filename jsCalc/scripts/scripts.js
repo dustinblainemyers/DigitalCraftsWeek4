@@ -23,6 +23,16 @@ numbers.forEach(number => {
  })
 })
 
+operations.forEach(operation => {
+
+    operation.addEventListener('click', function (e) {
+        e.preventDefault();
+        if(displayArray.length < 12) {
+        updateDisplayArray(number);
+        }
+    })
+   })
+
 
 function arrayToString(array) {
     let convertedString = "";
